@@ -99,20 +99,44 @@ print(f"Survived: {'Yes' if prediction[0] == 1 else 'No'}")
 
 ## Model Performance
 
-| Model | Validation Accuracy | Validation F1 | CV Accuracy |
-|-------|---------------------|---------------|-------------|
-| Logistic Regression | 81.01% | 73.85% | ~80% |
-| Random Forest | **82.12%** | 73.33% | **82.05%** |
+### Advanced Models Comparison
 
-**Best Model**: Random Forest was selected based on validation accuracy.
+| Model | Val Accuracy | Val F1 | Notes |
+|-------|--------------|--------|-------|
+| Logistic Regression | **81.01%** | 74.63% | Best overall |
+| Gradient Boosting | 81.01% | 74.63% | Strong performer |
+| XGBoost | 80.45% | 74.07% | Fast training |
+| SVM (RBF) | 80.45% | 72.44% | Good generalization |
+| KNN | 80.45% | 74.07% | Simple baseline |
+| Random Forest | 79.89% | 73.13% | Interpretable |
+| Voting Ensemble | 79.89% | 70.97% | Combines models |
+| Stacking Ensemble | 79.89% | 72.73% | Meta-learner |
+
+**Best Model**: Logistic Regression with 14 advanced features
+- **5-Fold CV Accuracy**: 81.03% (+/- 0.0303)
+
+### Feature Engineering
+
+The model uses 14 engineered features:
+
+| Feature | Description |
+|---------|-------------|
+| Pclass | Ticket class (1, 2, 3) |
+| Sex | Gender (0=male, 1=female) |
+| Age | Passenger age |
+| SibSp | Siblings/spouses aboard |
+| Parch | Parents/children aboard |
+| Fare | Ticket fare |
+| Embarked | Port of embarkation |
+| FamilySize | SibSp + Parch + 1 |
+| **Title** | Extracted from name (Mr, Mrs, Miss, Master, Rare) |
+| **IsAlone** | 1 if traveling alone |
+| **FarePerPerson** | Fare / FamilySize |
+| **HasCabin** | 1 if cabin info available |
+| **AgeBin** | Age category (Child, Teen, Adult, Senior) |
+| **Age_Class** | Age × Pclass interaction |
 
 ### Feature Importance
-
-The most important features for prediction (from Random Forest):
-1. **Sex** - Women had much higher survival rates
-2. **Fare** - Higher fare correlates with survival
-3. **Age** - Younger passengers survived more often
-4. **Pclass** - First-class passengers had better chances
 
 ## Dataset Information
 

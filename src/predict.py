@@ -2,6 +2,8 @@
 Make predictions using the trained Titanic model.
 
 This script loads the trained model and makes predictions on new data.
+Includes a demo function to test predictions on sample passengers.
+
 Usage: python src/predict.py
 """
 

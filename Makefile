@@ -1,7 +1,7 @@
 # Makefile for Titanic Survival Prediction
 # Convenience commands for common tasks
 
-.PHONY: install train train-advanced predict clean
+.PHONY: install train train-advanced predict clean test help
 
 # Install dependencies
 install:

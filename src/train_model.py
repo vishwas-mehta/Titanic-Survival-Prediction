@@ -2,6 +2,8 @@
 Train Titanic survival prediction model.
 
 This script trains a model and saves it to the models/ directory.
+Supports Logistic Regression and Random Forest classifiers.
+
 Usage: python src/train_model.py
 """
 

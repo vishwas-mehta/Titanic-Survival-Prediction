@@ -23,3 +23,13 @@ predict:
 clean:
 	rm -rf __pycache__ src/__pycache__
 	rm -rf .pytest_cache .mypy_cache
+
+# Show available commands
+help:
+	@echo "Available commands:"
+	@echo "  make install        - Install dependencies"
+	@echo "  make train          - Train basic model"
+	@echo "  make train-advanced - Train advanced models"
+	@echo "  make predict        - Run prediction demo"
+	@echo "  make clean          - Clean generated files"
+

@@ -140,7 +140,7 @@ The model uses 14 engineered features:
 
 ## Dataset Information
 
-The dataset contains information about 891 passengers from the Titanic:
+The dataset contains information about 891 passengers from the Titanic :
 
 | Feature | Description |
 |---------|-------------|
